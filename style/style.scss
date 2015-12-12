@@ -1,0 +1,93 @@
+/**
+ * compatible-mode:
+ *   Reference to code used just to ajust on old/deprecated browsers.
+ *
+ * ...
+ */
+// ============= Pallete =============
+  // Indigo pallete
+  $light-color: #C5CAE9; // 100
+  $base-color: #3F51B5; // 500
+  $dark-color: darken(#1A237E, 20%); // 900+
+
+  // Accent pallete (lime)
+  $accent-color: #CDDC39; // 500
+  $accent-color-live: #EEFF41; // A200 or A400:#C6FF00
+
+  // State colors
+  $success-color: #00796B; // teal-700
+  $warning-color: $accent-color;
+  $error-color: #B71C1C; // red-900
+
+// ============= Font =============
+  @import "font";
+
+// ============= Fontawesome =============  
+  $fa-font-path: "../bower_components/font-awesome/fonts";
+  @import "../bower_components/font-awesome/scss/font-awesome";
+
+// ============= Bootstrap Variables =============
+  $body-bg: $light-color;
+  $body-bg-lighten: lighten($body-bg, 5.0%);
+  $body-bg-darken: darken($body-bg, 5.0%);
+
+  $brand-primary: $base-color;
+  $brand-success: $success-color;
+  $brand-info: $light-color;
+  $brand-warning: $warning-color;
+  $brand-danger: $error-color;
+
+  $font-family-sans-serif: work-sans, sans-serif;
+  $font-family-base: $font-family-sans-serif;
+
+  $navbar-default-bg: $light-color;
+  $navbar-default-color: $dark-color;
+  $navbar-default-link-color: $navbar-default-color;
+  $navbar-default-link-hover-color: lighten($navbar-default-link-color, 10%);
+  $navbar-default-link-active-color: $navbar-default-link-color;
+  $navbar-default-brand-color: $navbar-default-link-color;
+  $navbar-default-brand-hover-color: lighten($navbar-default-brand-color, 10%);
+  $navbar-default-toggle-hover-bg: $base-color;
+  $navbar-default-toggle-border-color: transparent;
+  $navbar-default-toggle-icon-bar-bg: $dark-color;
+
+  $jumbotron-bg: transparent;
+
+  @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// ============= General web parts =============
+  html, body { 
+    height: 100%; // *compatible-mode
+  };
+  body {
+    padding-top: $navbar-height;
+  }
+
+  footer {
+    background-color: $dark-color;
+    bottom: 0;
+    color: $light-color;
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-height: 25vh;
+    min-height: 25%; // *compatible-mode
+  };
+  footer p {
+    margin: auto;
+  }
+
+  h1, h2 { text-align: center; };
+  h1, h3 { font-weight: lighter; };
+  h4 { font-weight: bold; };
+
+// ============= Components =============
+  .page { 
+    min-height: 80vh;
+    min-height: 80%; // *compatible-mode
+    padding: 8vmin 10vmin; };
+  .page:nth-child(even) { background-color: $body-bg; };
+  .page:nth-child(odd) { background-color: white; };
+
+  .first-page {
+    background-image: linear-gradient(125deg, $light-color, white) };
