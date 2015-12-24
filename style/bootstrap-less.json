@@ -181,6 +181,7 @@
     "@navbar-inverse-toggle-hover-bg": "#333",
     "@navbar-inverse-toggle-icon-bar-bg": "#fff",
     "@navbar-inverse-toggle-border-color": "#333",
+    
     "@nav-link-padding": "10px 15px",
     "@nav-link-hover-bg": "@gray-lighter",
     "@nav-disabled-link-color": "@gray-light",

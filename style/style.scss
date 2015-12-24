@@ -40,18 +40,23 @@
   $font-family-sans-serif: work-sans, sans-serif;
   $font-family-base: $font-family-sans-serif;
 
-  $navbar-default-bg: $light-color;
+  $navbar-default-bg: transparent;
   $navbar-default-color: $dark-color;
   $navbar-default-link-color: $navbar-default-color;
   $navbar-default-link-hover-color: lighten($navbar-default-link-color, 10%);
   $navbar-default-link-active-color: $navbar-default-link-color;
   $navbar-default-brand-color: $navbar-default-link-color;
   $navbar-default-brand-hover-color: lighten($navbar-default-brand-color, 10%);
-  $navbar-default-toggle-hover-bg: $base-color;
-  $navbar-default-toggle-border-color: transparent;
+  $navbar-default-toggle-hover-bg: $navbar-default-bg;
+  $navbar-default-toggle-border-color: $navbar-default-bg;
   $navbar-default-toggle-icon-bar-bg: $dark-color;
+  // TODO: .navbar-collapse {box-shadow} is showing a 1px white line
 
   $jumbotron-bg: transparent;
+
+  $thumbnail-bg: transparent;
+  $thumbnail-border: $dark-color;
+  $thumbnail-border-radius: 100vh;
 
   @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
@@ -59,9 +64,6 @@
   html, body { 
     height: 100%; // *compatible-mode
   };
-  body {
-    padding-top: $navbar-height;
-  }
 
   footer {
     background-color: $dark-color;
@@ -82,11 +84,16 @@
 
 // ============= Components =============
   .page { 
-    min-height: 80vh;
-    min-height: 80%; // *compatible-mode
+    min-height: 90vh;
+    min-height: 90%; // *compatible-mode
     padding: 8vmin 10vmin; };
   .page:nth-child(even) { background-color: $body-bg; };
   .page:nth-child(odd) { background-color: white; };
 
   .first-page {
     background-image: linear-gradient(125deg, $light-color, white) };
+
+  img.page-logo {
+    filter: opacity(50%);
+    -webkit-filter: opacity(50%); // *compatible-mode
+  }
