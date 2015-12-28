@@ -19,12 +19,15 @@
   $warning-color: $accent-color;
   $error-color: #B71C1C; // red-900
 
+
 // ============= Font =============
   @import "font";
+
 
 // ============= Fontawesome =============  
   $fa-font-path: "../bower_components/font-awesome/fonts";
   @import "../bower_components/font-awesome/scss/font-awesome";
+
 
 // ============= Bootstrap Variables =============
   $body-bg: $light-color;
@@ -60,6 +63,7 @@
 
   @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
+
 // ============= General web parts =============
   html, body { 
     height: 100%; // *compatible-mode
@@ -69,26 +73,33 @@
     background-color: $dark-color;
     bottom: 0;
     color: $light-color;
-    display: flex;
     position: relative;
     min-height: 25vh;
     min-height: 25%; // *compatible-mode
   };
-  footer p {
-    margin: auto;
-  }
 
   h1, h2 { text-align: center; };
   h1, h3 { font-weight: lighter; };
   h4 { font-weight: bold; };
 
+
 // ============= Components =============
   .page { 
     min-height: 90vh;
     min-height: 90%; // *compatible-mode
-    padding: 8vmin 10vmin; };
+    padding: 8vmin 10vmin;
+    display: flex;
+    flex-wrap: wrap; 
+    // align-items: center;
+    // align-content: center;
+    justify-content: space-around; };
   .page:nth-child(even) { background-color: $body-bg; };
   .page:nth-child(odd) { background-color: white; };
+  .page>h1 {
+    flex: 1 1 100%;
+    align-self: flex-start; }
+  .page>.page-item {
+    flex: 0 1 40%; }
 
   .first-page {
     background-image: linear-gradient(125deg, $light-color, white) };
