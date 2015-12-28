@@ -99,7 +99,8 @@
     flex: 1 1 100%;
     align-self: flex-start; }
   .page>.page-item {
-    flex: 0 1 40%; }
+    @media-query (min-width: 768px) {
+      flex: 0 1 40%; } }
 
   .first-page {
     background-image: linear-gradient(125deg, $light-color, white) };
