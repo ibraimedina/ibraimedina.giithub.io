@@ -43,7 +43,7 @@
   $font-family-sans-serif: work-sans, sans-serif;
   $font-family-base: $font-family-sans-serif;
 
-  $navbar-default-bg: transparent;
+  $navbar-default-bg: $body-bg-lighten;
   $navbar-default-color: $dark-color;
   $navbar-default-link-color: $navbar-default-color;
   $navbar-default-link-hover-color: lighten($navbar-default-link-color, 10%);
@@ -63,6 +63,8 @@
 
   @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
+  .navbar-brand {
+    padding: 9px 15px; }
 
 // ============= General web parts =============
   html, body { 
