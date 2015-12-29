@@ -73,6 +73,7 @@
     background-color: $dark-color;
     bottom: 0;
     color: $light-color;
+    padding: 5vmin 7vmin;
     position: relative;
     min-height: 25vh;
     min-height: 25%; // *compatible-mode
@@ -89,9 +90,7 @@
     min-height: 90%; // *compatible-mode
     padding: 8vmin 10vmin;
     display: flex;
-    flex-wrap: wrap; 
-    // align-items: center;
-    // align-content: center;
+    flex-wrap: wrap;
     justify-content: space-around; };
   .page:nth-child(even) { background-color: $body-bg; };
   .page:nth-child(odd) { background-color: white; };
